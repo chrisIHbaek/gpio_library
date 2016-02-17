@@ -94,6 +94,6 @@ int gpio_read(GPIO gpio)
 	fgets(value_buf, sizeof(value_buf), gpio_value);
 	
 	value = atoi(value_buf);
-	
+	fclose(gpio_value);
 	return value;
 }
